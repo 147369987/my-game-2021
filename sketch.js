@@ -210,10 +210,8 @@ function draw() {
     
     //jump when the space key is pressed
     
-    if(touches.length>0 && main.y >= 545||keyDown("space")&& main.y >= 545||keyDown(UP_ARROW)&& main.y >= 545) {
-     
-      main.velocityY = -15;
-      
+   if((touches.length > 0 || keyDown("SPACE")) && main.y  >= height-210) {
+    main.velocityY = -15;
       jumpSound.play();
       touches=[];
   }
